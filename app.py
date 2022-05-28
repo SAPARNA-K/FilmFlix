@@ -264,7 +264,7 @@ movie=pd.read_pickle('final_final.bz2')
 movie_list = movie['movie_title'].values
 
 #setting backgroung image
-set_png_as_page_bg('images\image.png')
+set_png_as_page_bg('image.png')
 #setting title
 filmflix='<h2 style="color:#dc3545;text-align:center;font-weight:750">FilmFlix</h2>'
 st.markdown(filmflix,unsafe_allow_html=True)

@@ -259,9 +259,9 @@ def greatest(num1,num2,num3):
 
 
 movies = pickle.load(open('movie_list.pkl','rb'))
-movie=pd.read_csv("final_final.csv")
-movie=pd.DataFrame(movie)
+movie=pd.read_pickle('final_final.bz2')
 movie_list = movie['movie_title'].values
+
 #setting backgroung image
 set_png_as_page_bg('images\image.png')
 #setting title

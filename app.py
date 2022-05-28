@@ -466,7 +466,7 @@ if choose=="Recommendation based on user's profile":
         st.subheader("Confusion matrix")
         st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(lr, x_test, y_test, display_labels=  class_names)
-        st.pyplot()
+        # st.pyplot()
         st.subheader("Recommendations for {} on Logistic regression".format(name))
         st.write(predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
     
@@ -483,7 +483,7 @@ if choose=="Recommendation based on user's profile":
         st.subheader("Confusion matrix")
         st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(knn, x_test, y_test, display_labels=  class_names)
-        st.pyplot()
+        # st.pyplot()
         st.subheader("recommendations for {} on K Neighbors Classifier: ".format(name))
         st.write(predict_output_knn(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
     
@@ -498,7 +498,7 @@ if choose=="Recommendation based on user's profile":
         st.subheader("Confusion matrix")
         st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(gb, x_test, y_test, display_labels=  class_names)
-        st.pyplot()
+        # st.pyplot()
         st.subheader("recommendations for {} on Gradient Boosting Classifier".format(name))
         st.write(predict_output_gb(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
     

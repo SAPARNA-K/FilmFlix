@@ -465,8 +465,9 @@ if choose=="Recommendation based on user's profile":
         st.write(acc_1)
         st.subheader("Confusion matrix")
         st.set_option('deprecation.showPyplotGlobalUse', False)
+        fig, ax = plt.figure(figsize=(10,10))
         plot_confusion_matrix(lr, x_test, y_test, display_labels=  class_names)
-        # st.pyplot()
+        st.pyplot(fig)
         st.subheader("Recommendations for {} on Logistic regression".format(name))
         st.write(predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
     

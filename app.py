@@ -34,7 +34,7 @@ from sklearn.metrics import plot_confusion_matrix,plot_roc_curve , plot_precisio
 
 #create_similarity function is called by rcmd(m) function to find similarity between the movies using cosine_similarity function
 def create_similarity():
-    data = pd.read_csv('final_final.csv')
+    data =pd.read_pickle('final_final.bz2')
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['comb'])
     similarity = cosine_similarity(count_matrix)
@@ -401,9 +401,11 @@ if choose=="Recommendation based on user's profile":
     
 
     st.subheader("Exploratory data analysis on dataset")
-    infile = open('net.pkl','rb')
-    new_dict = pickle.load(infile)
-    infile.close()
+    infile= pd.read_pickle('net.bz2')
+    new_dict=(pd.DataFrame(infile))
+    # open('net.pkl','rb')
+    # new_dict = pickle.load(infile)
+    # infile.close()
     scaler = StandardScaler()
     ###plots
     fig_dims = (5, 5)

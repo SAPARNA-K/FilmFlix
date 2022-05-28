@@ -421,7 +421,6 @@ if choose=="Recommendation based on user's profile":
 
     fig,ax=plt.subplots()
     sns.countplot(new_dict['Gender'],ax=ax)
-    
     st.pyplot(fig)
 
 

@@ -409,7 +409,7 @@ if choose=="Recommendation based on user's profile":
     fig,ax=plt.subplots(figsize=fig_dims)
     ax.hist(new_dict['Age'], bins=20)
     plt.xlabel("Age")
-    plt.xlabel("Count")
+    plt.ylabel("Count")
     st.pyplot(fig)
    
 

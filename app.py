@@ -408,6 +408,8 @@ if choose=="Recommendation based on user's profile":
     fig_dims = (5, 5)
     fig,ax=plt.subplots(figsize=fig_dims)
     ax.hist(new_dict['Age'], bins=20)
+    plt.xlabel("Age")
+    plt.xlabel("Count")
     st.pyplot(fig)
    
 
@@ -419,6 +421,7 @@ if choose=="Recommendation based on user's profile":
 
     fig,ax=plt.subplots()
     sns.countplot(new_dict['Gender'],ax=ax)
+    
     st.pyplot(fig)
 
 

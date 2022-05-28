@@ -443,7 +443,6 @@ if choose=="Recommendation based on user's profile":
         gender=0
     else:
         gender=1
-    # gender=st.number_input("Enter your gender(0 for male/ 1 for female) : ",min_value=0,max_value=1,step=1)
     age=st.slider("Enter your age: ",min_value=0,  max_value=100)
     option = st.selectbox(
      'What is your Gender? ',
@@ -452,68 +451,69 @@ if choose=="Recommendation based on user's profile":
         location=1
     else:
         location=0
-    # location=st.number_input("Enter your location (0 for rural / 1 for urban): ",min_value=0,max_value=1,step=1)
+
     income=st.number_input("Enter your income in k$: ",min_value=10,max_value=10000,step=10)
     
-    st.subheader("Hi {} !!!".format(name))
-
-
-    #LogisticRegression model
-    lr = LogisticRegression()
-    lr.fit(x_train, y_train)
-    pred_lr = lr.predict(x_test)
-    class_names=y.unique()
-    acc_1=metrics.accuracy_score(y_test, pred_lr)*100
-    st.subheader("Accuracy of Logistic Regression")
-    st.write(acc_1)
-    st.subheader("Confusion matrix")
-    plot_confusion_matrix(lr, x_test, y_test, display_labels=  class_names)
-    st.pyplot()
-    st.subheader("Recommendations for {} on Logistic regression".format(name))
-    st.write(predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
-
-
+    if(st.button("Recommend")):
+        st.subheader("Hi {} !!!".format(name))
     
     
-    #KNeighborsClassifier model
-    knn = KNeighborsClassifier()
-    knn.fit(x_train, y_train)
-    pred_knn = knn.predict(x_test)
-    st.subheader("Accuracy of K Neighbors Classifier: ")
-    acc_2=metrics.accuracy_score(y_test, pred_knn    )*100
-    st.write(acc_2)
-    st.subheader("Confusion matrix")
-    plot_confusion_matrix(knn, x_test, y_test, display_labels=  class_names)
-    st.pyplot()
-    st.subheader("recommendations for {} on K Neighbors Classifier: ".format(name))
-    st.write(predict_output_knn(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
-
-
-    #GradientBoostingClassifier model
-    gb = GradientBoostingClassifier()
-    gb.fit(x_train, y_train)
-    pred_gb = gb.predict(x_test)
-    acc_3=metrics.accuracy_score(y_test, pred_gb)*100
-    st.subheader("Accuracy of Gradient Boosting Classifier")
-    st.write(acc_3)
-    st.subheader("Confusion matrix")
-    plot_confusion_matrix(gb, x_test, y_test, display_labels=  class_names)
-    st.pyplot()
-    st.subheader("recommendations for {} on Gradient Boosting Classifier".format(name))
-    st.write(predict_output_gb(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
-
-
-    #getting the index of highly accurate model
-    index=greatest(acc_1,acc_2,acc_3)
-    print("index")
-    print(index)
-    if(index==1):
-        search_by_genre((predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
-    elif(index==2):
-        search_by_genre((predict_output_knn(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
-    else:
-        search_by_genre((predict_output_gb(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
-
+        #LogisticRegression model
+        lr = LogisticRegression()
+        lr.fit(x_train, y_train)
+        pred_lr = lr.predict(x_test)
+        class_names=y.unique()
+        acc_1=metrics.accuracy_score(y_test, pred_lr)*100
+        st.subheader("Accuracy of Logistic Regression")
+        st.write(acc_1)
+        st.subheader("Confusion matrix")
+        plot_confusion_matrix(lr, x_test, y_test, display_labels=  class_names)
+        st.pyplot()
+        st.subheader("Recommendations for {} on Logistic regression".format(name))
+        st.write(predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
+    
+    
+        
+        
+        #KNeighborsClassifier model
+        knn = KNeighborsClassifier()
+        knn.fit(x_train, y_train)
+        pred_knn = knn.predict(x_test)
+        st.subheader("Accuracy of K Neighbors Classifier: ")
+        acc_2=metrics.accuracy_score(y_test, pred_knn    )*100
+        st.write(acc_2)
+        st.subheader("Confusion matrix")
+        plot_confusion_matrix(knn, x_test, y_test, display_labels=  class_names)
+        st.pyplot()
+        st.subheader("recommendations for {} on K Neighbors Classifier: ".format(name))
+        st.write(predict_output_knn(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
+    
+    
+        #GradientBoostingClassifier model
+        gb = GradientBoostingClassifier()
+        gb.fit(x_train, y_train)
+        pred_gb = gb.predict(x_test)
+        acc_3=metrics.accuracy_score(y_test, pred_gb)*100
+        st.subheader("Accuracy of Gradient Boosting Classifier")
+        st.write(acc_3)
+        st.subheader("Confusion matrix")
+        plot_confusion_matrix(gb, x_test, y_test, display_labels=  class_names)
+        st.pyplot()
+        st.subheader("recommendations for {} on Gradient Boosting Classifier".format(name))
+        st.write(predict_output_gb(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler))
+    
+    
+        #getting the index of highly accurate model
+        index=greatest(acc_1,acc_2,acc_3)
+        print("index")
+        print(index)
+        if(index==1):
+            search_by_genre((predict_output_lr(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
+        elif(index==2):
+            search_by_genre((predict_output_knn(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
+        else:
+            search_by_genre((predict_output_gb(x_train,x_test,y_train,int(gender),int(age),int(income),int(location),scaler)).capitalize(),movies)
+    
 #filtering the movie based on genre and popularity
 if choose=="Recommendation based on genre":
     st.balloons()

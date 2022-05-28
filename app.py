@@ -567,5 +567,5 @@ if choose=="Recommend based on your mood":
     
     if(st.button('recommend')):
         
-        webbrowser.open_new_tab(url)
+        st.markdown(url,unsafe_allow_html=True)
                 

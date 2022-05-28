@@ -1,5 +1,6 @@
 #import packages
 import streamlit as st
+import warnings
 import streamlit.components.v1 as stc
 import pickle
 import requests
@@ -403,11 +404,7 @@ if choose=="Recommendation based on user's profile":
     st.subheader("Exploratory data analysis on dataset")
     infile= pd.read_pickle('net.bz2')
     new_dict=(pd.DataFrame(infile))
-    # open('net.pkl','rb')
-    # new_dict = pickle.load(infile)
-    # infile.close()
     scaler = StandardScaler()
-    ###plots
     fig_dims = (5, 5)
     fig,ax=plt.subplots(figsize=fig_dims)
     ax.hist(new_dict['Age'], bins=20)
@@ -467,6 +464,7 @@ if choose=="Recommendation based on user's profile":
         st.subheader("Accuracy of Logistic Regression")
         st.write(acc_1)
         st.subheader("Confusion matrix")
+        st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(lr, x_test, y_test, display_labels=  class_names)
         st.pyplot()
         st.subheader("Recommendations for {} on Logistic regression".format(name))
@@ -483,6 +481,7 @@ if choose=="Recommendation based on user's profile":
         acc_2=metrics.accuracy_score(y_test, pred_knn    )*100
         st.write(acc_2)
         st.subheader("Confusion matrix")
+        st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(knn, x_test, y_test, display_labels=  class_names)
         st.pyplot()
         st.subheader("recommendations for {} on K Neighbors Classifier: ".format(name))
@@ -497,6 +496,7 @@ if choose=="Recommendation based on user's profile":
         st.subheader("Accuracy of Gradient Boosting Classifier")
         st.write(acc_3)
         st.subheader("Confusion matrix")
+        st.set_option('deprecation.showPyplotGlobalUse', False)
         plot_confusion_matrix(gb, x_test, y_test, display_labels=  class_names)
         st.pyplot()
         st.subheader("recommendations for {} on Gradient Boosting Classifier".format(name))

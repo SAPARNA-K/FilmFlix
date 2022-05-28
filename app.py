@@ -258,7 +258,8 @@ def greatest(num1,num2,num3):
     return index
 
 
-movies = pickle.load(open('movie_list.pkl','rb'))
+
+movies=pd.read_pickle('movie_list.bz2')
 movie=pd.read_pickle('final_final.bz2')
 movie_list = movie['movie_title'].values
 

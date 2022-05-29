@@ -38,10 +38,10 @@ pinned: false
        #### This section recommends music based on language, mood and favourite singer of the user.
        
  ## TechStack
-    1.Python
-    2.Streamlit
-    3.TMDb api
-    4.Html (inside streamlit.components.v1)
+ 1.Python
+ 2.Streamlit
+ 3.TMDb api
+ 4.Html (inside streamlit.components.v1)
           
 ## How to run the project?
 
@@ -55,7 +55,7 @@ pinned: false
 
 4.`pip install -r requirements.txt`
 
-5.`streamlit run app.py`.
+5.`streamlit run app.py`
 
               
               

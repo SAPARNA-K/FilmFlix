@@ -62,7 +62,7 @@ Link to the app: https://filmflix-0.herokuapp.com/
   `python -m venv my_venv`.
 
 3.Activate the virtual environment by the placing the relative path of Activate.ps1 in my_venv:
-  `my_venv\Scripts\Activate.ps1`
+   `my_venv\Scripts\Activate.ps1`
 
 4.`pip install -r requirements.txt`
 

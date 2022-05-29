@@ -70,7 +70,7 @@ Link to the app: https://filmflix-0.herokuapp.com/
 
 ## ScreenShots
 ![Home](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Home.png)
-!(https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Recommendation%20based%20on%20similar%20movies%202.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Recommendation%20based%20on%20similar%20movies%202.png)
 
               
               

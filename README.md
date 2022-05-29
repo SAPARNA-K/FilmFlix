@@ -11,6 +11,8 @@ pinned: false
 
 # FilmFlix
 
+Link to the app: https://filmflix-0.herokuapp.com/
+
 ## Overview 
    ### Home
    It contains posters of Top 6 most liked and most popular movies.These movies are sorted based on number of like and popularity measures.

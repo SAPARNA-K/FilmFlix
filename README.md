@@ -68,6 +68,9 @@ Link to the app: https://filmflix-0.herokuapp.com/
 
 5.`streamlit run app.py`
 
+## ScreenShots
+![Home](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Home.png)
+
               
               
               

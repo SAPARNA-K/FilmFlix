@@ -44,12 +44,17 @@ pinned: false
     4.Html (inside streamlit.components.v1)
           
 ## How to run the project?
+
 1.Clone or download this repository to your local machine.
+
 2.Then install the virtal environment in the file directory using the command:
   `python -m venv my_venv`.
+
 3.Activate the virtual environment by the placing the relative path of Activate.ps1 in my_venv:
   `my_venv\Scripts\Activate.ps1`.
+
 4.`pip install -r requirements.txt`.
+
 5.`streamlit run app.py`.
 
               

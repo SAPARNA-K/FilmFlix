@@ -23,21 +23,21 @@ pinned: false
    
    Then it builds three ml models:
    
-   * [KNearestNeigbour]
+   *  KNearestNeigbour
    
-   * [GradientBoostingClassifier]
+   *  GradientBoostingClassifier
    
-   * [LogisticRegression]
+   *  LogisticRegression
    
     Then it compares the accuracy of three models and suggests genre of the movie based on high accuracy.
              
    ### Recommendation based on Genre
    This section searches and filters the five genres of the movie.
-   *[Action]
-   *[Romance]
-   *[Thriller]
-   *[Comedy]
-   *[Drama]
+   *  Action
+   *  Romance
+   *  Thriller
+   *  Comedy
+   *  Drama
             
  ### Recommendation based on your mood
  This section recommends music based on language, mood and favourite singer of the user.

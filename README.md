@@ -13,7 +13,7 @@ pinned: false
 
 ## Overview 
    ### Home
-       #### It contains posters of Top 6 most liked and most popular movies.These movies are sorted based on number of like and popularity measures.
+     It contains posters of Top 6 most liked and most popular movies.These movies are sorted based on number of like and popularity measures.
        
    ### Recommendation based on similar movies:
        #### This works based on content based recommender system using cosine similarity.Cosine similarity is a metric used to measure how similar two items are.
@@ -38,19 +38,19 @@ pinned: false
        #### This section recommends music based on language, mood and favourite singer of the user.
        
  ## TechStack
-      #### 1.Python
-      #### 2.Streamlit
-      #### 3.TMDb api
-      #### 4.Html (inside streamlit.components.v1)
+    1.Python
+    2.Streamlit
+    3.TMDb api
+    4.Html (inside streamlit.components.v1)
           
 ## How to run the project?
 1.Clone or download this repository to your local machine.
 2.Then install the virtal environment in the file directory using the command:
-  python -m venv my_venv
+  `python -m venv my_venv`
 3.Activate the virtual environment by the placing the relative path of Activate.ps1 in my_venv:
-  my_venv\Scripts\Activate.ps1
-4.pip install -r requirements.txt
-5.streamlit run app.py
+  `my_venv\Scripts\Activate.ps1`
+4.`pip install -r requirements.txt`
+5.`streamlit run app.py`
 
               
               

@@ -62,12 +62,19 @@ Link to the app: https://filmflix-0.herokuapp.com/
   `python -m venv my_venv`.
 
 3.Activate the virtual environment by the placing the relative path of Activate.ps1 in my_venv:
-  `my_venv\Scripts\Activate.ps1`
+   `my_venv\Scripts\Activate.ps1`
 
 4.`pip install -r requirements.txt`
 
 5.`streamlit run app.py`
 
+## ScreenShots
+![Home](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Home.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Recommendation%20based%20on%20similar%20movies%202.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/Recommendation%20based%20on%20similar%20movies.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/rcmd_genre.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/rcmd_song.png)
+![](https://github.com/SAPARNA-K/FilmFlix/blob/master/screenshots/rcmd_user_prof.png)
               
               
               

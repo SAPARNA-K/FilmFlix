@@ -23,11 +23,11 @@ pinned: false
    
    Then it builds three ml models:
    
-   *[KNearestNeigbour]
+   * [KNearestNeigbour]
    
-   *[GradientBoostingClassifier]
+   * [GradientBoostingClassifier]
    
-   *[LogisticRegression]
+   * [LogisticRegression]
    
     Then it compares the accuracy of three models and suggests genre of the movie based on high accuracy.
              

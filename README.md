@@ -29,7 +29,7 @@ pinned: false
    
    *  LogisticRegression
    
-    Then it compares the accuracy of three models and suggests genre of the movie based on high accuracy.
+   Then it compares the accuracy of three models and suggests genre of the movie based on high accuracy.
              
    ### Recommendation based on Genre
    This section searches and filters the five genres of the movie.

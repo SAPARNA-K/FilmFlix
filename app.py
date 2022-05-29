@@ -443,7 +443,7 @@ if choose=="Recommendation based on user's profile":
         gender=1
     age=st.slider("Enter your age: ",min_value=0,  max_value=100)
     option = st.selectbox(
-     'What is your Gender? ',
+     'Enter your location? ',
      ('Urban', 'Rural'))
     if(option=="Urban"):
         location=1
